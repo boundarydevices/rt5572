@@ -1,0 +1,11 @@
+*.o
+*.o.cmd
+*.ko
+*.ko.cmd
+*.mod.c
+.tmp_versions
+os/linux/Makefile
+*.symvers
+*.order
+*.o.d
+tools/bin2h
