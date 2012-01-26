@@ -1,0 +1,1 @@
+make PLATFORM=HYDROGEN TARGET=LINUX ARCH=arm CROSS_COMPILE=arm-v5t-linux-gnueabi- LINUX_SRC=/home/ericn/linux-hydrogen all
