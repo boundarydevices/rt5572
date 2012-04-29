@@ -1,0 +1,1 @@
+make PLATFORM=NITROGEN53 TARGET=LINUX ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- LINUX_SRC=$HOME/linux-nitrogen53 all
