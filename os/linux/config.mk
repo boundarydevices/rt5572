@@ -1204,6 +1204,10 @@ ifeq ($(PLATFORM),HYDROGEN)
 EXTRA_CFLAGS := $(WFLAGS) -I$(RT28xx_DIR)/include -mlittle-endian -Iarch/arm/mach-pxa/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=5 -march=armv5te -mtune=xscale -Wa,-mcpu=xscale -msoft-float -Uarm -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign  
 endif
 
+ifeq ($(PLATFORM),NITROGEN53)
+EXTRA_CFLAGS := $(WFLAGS) -I$(RT28xx_DIR)/include -mlittle-endian -Wall -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a
+endif
+
 ifeq ($(PLATFORM),MT85XX)
     ifneq (,$(findstring 2.4,$(LINUX_SRC)))
 	# Linux 2.4

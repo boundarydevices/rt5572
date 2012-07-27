@@ -63,6 +63,7 @@ RTMP_SRC_DIR = $(RT28xx_DIR)/RT$(MODULE)
 #PLATFORM = UBICOM_IPX8
 #PLATFORM = INTELP6
 #PLATFORM = HYDROGEN
+#PLATFORM = NITROGEN53
 
 #APSOC
 ifeq ($(MODULE),3050)
@@ -288,6 +289,11 @@ endif
 ifeq ($(PLATFORM),HYDROGEN)
 LINUX_SRC = $(HOME)/linux-hydrogen
 CROSS_COMPILE = arm-v5t-linux-gnueabi-
+endif
+
+ifeq ($(PLATFORM),NITROGEN53)
+LINUX_SRC = $(HOME)/linux-nitrogen53
+CROSS_COMPILE = arm-none-linux-gnueabi-
 endif
 
 ifeq ($(PLATFORM),MT85XX)
