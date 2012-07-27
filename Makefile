@@ -27,7 +27,7 @@ include $(RT28xx_DIR)/os/linux/config.mk
 RTMP_SRC_DIR = $(RT28xx_DIR)/RT$(MODULE)
 
 #PLATFORM: Target platform
-PLATFORM = PC
+#PLATFORM = PC
 #PLATFORM = 5VT
 #PLATFORM = IKANOS_V160
 #PLATFORM = IKANOS_V180
@@ -62,6 +62,7 @@ PLATFORM = PC
 #PLATFORM = RALINK_3352
 #PLATFORM = UBICOM_IPX8
 #PLATFORM = INTELP6
+#PLATFORM = HYDROGEN
 
 #APSOC
 ifeq ($(MODULE),3050)
@@ -282,6 +283,11 @@ endif
 
 ifeq ($(PLATFORM),DM6446)
 LINUX_SRC = /home/fonchi/work/soc/ti-davinci
+endif
+
+ifeq ($(PLATFORM),HYDROGEN)
+LINUX_SRC = $(HOME)/linux-hydrogen
+CROSS_COMPILE = arm-v5t-linux-gnueabi-
 endif
 
 ifeq ($(PLATFORM),MT85XX)
