@@ -166,15 +166,15 @@ const REG_PAIR_CHANNEL RF5592Reg_Channel_5G[] =
 	{RF_R56, 36, 50, 0xD3},
 	{RF_R56, 52, 128, 0xBB},
 	{RF_R56, 130, 165, 0xAB},
-	{RF_R58, 36, 64, 0x15},
-	{RF_R58, 100, 116, 0x1D},
-	{RF_R58, 118, 165, 0x15},
+	{RF_R58, 36, 64, 0x11},
+	{RF_R58, 100, 116, 0x19},
+	{RF_R58, 118, 165, 0x11},
 	{RF_R59, 36, 64, 0x7F},
 	{RF_R59, 100, 138, 0x3F},
 	{RF_R59, 140, 165, 0x7C},
-	{RF_R62, 36, 64, 0x15},
-	{RF_R62, 100, 116, 0x1D},
-	{RF_R62, 118, 165, 0x15},
+	{RF_R62, 36, 64, 0x11},
+	{RF_R62, 100, 116, 0x19},
+	{RF_R62, 118, 165, 0x11},
 };
 UCHAR NUM_RF5592REG_CHANNEL_5G = (sizeof(RF5592Reg_Channel_5G) / sizeof(REG_PAIR_CHANNEL));
 #endif /* RTMP_MAC_USB */
@@ -1651,7 +1651,8 @@ static VOID RT5592_AsicAntennaDefaultReset(
 {
 		pAntenna->word = 0;
 		pAntenna->field.RfIcType = RFIC_5592;
-		pAntenna->field.TxPath = 2;
+		//SparkLAN pAntenna->field.TxPath = 2;
+		pAntenna->field.TxPath = 1;
 		pAntenna->field.RxPath = 2;
 }
 
