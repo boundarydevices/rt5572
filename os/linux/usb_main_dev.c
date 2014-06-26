@@ -46,6 +46,7 @@ static int rtusb_disconnect_by_rmmod = 0;
 /* *** If you have a solution for the bug in current version of driver, please mail to me. */
 /* Otherwise post to forum in ralinktech's web site(www.ralinktech.com) and let all users help you. *** */
 MODULE_AUTHOR("Paul Lin <paul_lin@ralinktech.com>");
+MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("RT2870 Wireless Lan Linux Driver");
 #ifdef CONFIG_STA_SUPPORT
 #ifdef MODULE_VERSION
